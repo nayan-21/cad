@@ -1,0 +1,174 @@
+import { Link } from 'react-router-dom';
+import { 
+  Phone, 
+  MessageCircle, 
+  FileText, 
+  Receipt, 
+  Building, 
+  BookOpen, 
+  Award, 
+  CheckCircle, 
+  Clock 
+} from 'lucide-react';
+import ServiceCard from '../components/ServiceCard';
+
+const Home = () => {
+  const services = [
+    {
+      title: "GST Filing",
+      description: "Hassle-free preparation and timely filing of GST returns to ensure full compliance.",
+      icon: <FileText size={28} />
+    },
+    {
+      title: "Income Tax Return",
+      description: "Accurate filing of personal and corporate income tax returns to maximize deductions.",
+      icon: <Receipt size={28} />
+    },
+    {
+      title: "Business Registration",
+      description: "End-to-end guidance and processing for registering your new company or LLC.",
+      icon: <Building size={28} />
+    },
+    {
+      title: "Bookkeeping",
+      description: "Detailed recording of your daily financial transactions and monthly reconciliations.",
+      icon: <BookOpen size={28} />
+    }
+  ];
+
+  const whyChooseUs = [
+    {
+      title: "Experienced & Reliable",
+      description: "Years of industry experience ensure your finances are in safe, professional hands.",
+      icon: <Award size={32} className="text-primary mb-4" />
+    },
+    {
+      title: "Accurate & Timely Filing",
+      description: "We proactively manage deadlines, guaranteeing precision in every form submitted.",
+      icon: <CheckCircle size={32} className="text-primary mb-4" />
+    },
+    {
+      title: "Quick Support",
+      description: "We are always one call or message away to answer your financial queries.",
+      icon: <Clock size={32} className="text-primary mb-4" />
+    }
+  ];
+
+  return (
+    <div>
+      {/* 1. Hero Section */}
+      <section className="relative bg-white pt-24 pb-32">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#f9fafb_1px,transparent_1px),linear-gradient(to_bottom,#f9fafb_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-text-primary leading-tight max-w-4xl mx-auto mb-6">
+            Reliable Accounting & Tax Services for <span className="text-primary">Individuals & Businesses</span>
+          </h1>
+          <p className="text-xl text-text-secondary leading-relaxed mb-10 max-w-2xl mx-auto">
+            Professional, accurate, and timely financial services you can trust.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a 
+              href="tel:+15551234567" 
+              className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white px-8 py-3.5 rounded-lg font-medium transition-colors flex items-center justify-center text-lg shadow-sm"
+            >
+              <Phone className="mr-2" size={20} /> Call Now
+            </a>
+            <a 
+              href="https://wa.me/15551234567" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-3.5 rounded-lg font-medium transition-colors flex items-center justify-center text-lg shadow-sm"
+            >
+              <MessageCircle className="mr-2" size={20} /> WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. Intro Section */}
+      <section className="py-20 bg-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="text-primary font-semibold uppercase tracking-wider text-sm mb-2 block">Welcome</span>
+          <h2 className="text-3xl font-heading font-bold text-text-primary mb-6">
+            Meet Your Trusted Financial Partner
+          </h2>
+          <p className="text-lg text-text-secondary leading-relaxed">
+            As a dedicated financial professional, I am committed to simplifying the technical complexities of accounting and tax preparation for you. Whether you are an individual looking to maximize your tax return or a growing business needing meticulous bookkeeping and compliance, my objective is to provide secure, transparent, and accurate financial services. Your growth and peace of mind are my top priorities.
+          </p>
+        </div>
+      </section>
+
+      {/* 3. Services Preview */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-text-primary mb-4">
+              Our Expertise
+            </h2>
+            <p className="text-lg text-text-secondary">
+              Focused solutions designed to keep your finances organized and compliant.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => (
+              <ServiceCard 
+                key={index}
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+                delay={index * 100}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Why Choose Us */}
+      <section className="py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-text-primary mb-4">
+              Why Choose Us?
+            </h2>
+            <p className="text-lg text-text-secondary">
+              Delivering on promises with integrity and precision.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {whyChooseUs.map((feature, index) => (
+              <div key={index} className="bg-white p-10 rounded-2xl text-center shadow-sm border border-gray-100 hover:-translate-y-1 transition-transform duration-300">
+                <div className="flex justify-center">{feature.icon}</div>
+                <h3 className="text-xl font-heading font-bold text-text-primary mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-text-secondary leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. CTA Section */}
+      <section className="py-20 bg-primary">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8">
+            Get your taxes filed today
+          </h2>
+          <Link 
+            to="/contact" 
+            className="inline-block bg-white text-primary hover:bg-gray-50 px-10 py-4 rounded-lg font-bold text-lg transition-colors shadow-sm"
+          >
+            Contact Now
+          </Link>
+        </div>
+      </section>
+
+    </div>
+  );
+};
+
+export default Home;
