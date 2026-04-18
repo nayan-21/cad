@@ -45,12 +45,6 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link
-              to="/contact"
-              className="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-md font-medium transition-colors"
-            >
-              Consultation
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,15 +77,6 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <div className="pt-4 pb-2 px-3">
-              <Link
-                to="/contact"
-                onClick={() => setIsOpen(false)}
-                className="w-full flex justify-center items-center bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-md font-medium transition-colors"
-              >
-                Get a Consultation
-              </Link>
-            </div>
           </div>
         </div>
       )}
