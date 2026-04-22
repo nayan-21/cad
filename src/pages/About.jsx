@@ -17,7 +17,7 @@ const About = () => {
             <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-xl mx-auto">
               <img 
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600&h=600" 
-                alt="Accountant Profile" 
+                alt="Advocate Dipak Prajapati, Advocate & GST Practitioner" 
                 className="w-full h-full object-cover"
               />
             </div>
@@ -27,7 +27,7 @@ const About = () => {
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">
             Advocate Dipak Prajapati
           </h1>
-          <p className="text-xl md:text-2xl text-blue-100 font-medium tracking-wide">
+          <p className="text-xl md:text-2xl text-blue-50 font-medium tracking-wide">
             Advocate & GST Practitioner
           </p>
         </div>
@@ -137,6 +137,7 @@ const About = () => {
           <Link 
             to="/contact" 
             className="inline-block bg-white text-primary hover:bg-gray-50 px-10 py-4 rounded-lg font-bold text-lg transition-colors shadow-sm"
+            aria-label="Navigate to contact page to get a consultation"
           >
             Get a Consultation
           </Link>

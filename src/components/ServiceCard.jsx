@@ -24,9 +24,10 @@ const ServiceCard = ({ title, description, icon, delay = 0, showPricingLabel = f
       <Link 
         to={`/contact?service=${encodeURIComponent(title)}`} 
         className="flex items-center justify-between w-full text-primary font-medium group-hover:text-primary-dark transition-colors mt-auto border-t border-gray-50 pt-4"
+        aria-label={`Discuss ${title} service via contact page`}
       >
-        <span>Discuss Service</span>
-        <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+        <span aria-hidden="true">Discuss Service</span>
+        <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
       </Link>
     </div>
   );

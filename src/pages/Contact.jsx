@@ -47,7 +47,7 @@ const Contact = () => {
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
             Get in Touch
           </h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-50 max-w-2xl mx-auto">
             Ready to simplify your taxes and secure your financial future? Reach out to us today.
           </p>
         </div>
@@ -69,16 +69,18 @@ const Contact = () => {
                   <a 
                     href="tel:+917016965221" 
                     className="flex-1 bg-white hover:bg-gray-100 border border-gray-200 text-text-primary font-medium px-6 py-4 rounded-xl flex items-center justify-center transition-colors shadow-sm text-lg"
+                    aria-label="Call us at 7016965221"
                   >
-                    <Phone className="mr-3 text-primary" size={24} /> 7016965221
+                    <Phone className="mr-3 text-primary" size={24} aria-hidden="true" /> 7016965221
                   </a>
                   <a 
                     href={`https://wa.me/917016965221?text=${encodeURIComponent("Hi Advocate Dipak, I would like to inquire about your services.")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-[#25D366] hover:bg-[#128C7E] text-white font-medium px-6 py-4 rounded-xl flex items-center justify-center transition-colors shadow-sm text-lg"
+                    aria-label="Message us on WhatsApp"
                   >
-                    <MessageCircle className="mr-3" size={24} /> WhatsApp
+                    <MessageCircle className="mr-3" size={24} aria-hidden="true" /> WhatsApp
                   </a>
                 </div>
 

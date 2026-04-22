@@ -56,7 +56,7 @@ const Services = () => {
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
             Explore Our Services
           </h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-50 max-w-2xl mx-auto">
             Comprehensive, accurate, and professional financial solutions tailored to your unique needs.
           </p>
         </div>
