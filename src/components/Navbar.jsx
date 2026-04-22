@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center gap-2">
+            <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
               <div className="bg-primary p-2 rounded-lg text-white">
                 <Calculator size={24} />
               </div>
@@ -60,26 +60,28 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 absolute w-full">
-          <div className="px-4 pt-2 pb-6 space-y-1 shadow-lg">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                onClick={() => setIsOpen(false)}
-                className={`${
-                  isActive(link.path)
-                    ? 'bg-blue-50 text-primary border-l-4 border-primary'
-                    : 'text-text-secondary hover:bg-gray-50 border-l-4 border-transparent'
-                } block px-3 py-3 text-base font-medium transition-colors`}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
+      <div 
+        className={`md:hidden bg-white border-gray-100 absolute w-full transition-all duration-300 ease-in-out overflow-hidden shadow-lg ${
+          isOpen ? 'max-h-96 opacity-100 border-b' : 'max-h-0 opacity-0 border-transparent'
+        }`}
+      >
+        <div className="px-4 py-4 space-y-1">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              to={link.path}
+              onClick={() => setIsOpen(false)}
+              className={`${
+                isActive(link.path)
+                  ? 'bg-blue-50 text-primary border-l-4 border-primary'
+                  : 'text-text-secondary hover:bg-gray-50 border-l-4 border-transparent'
+              } block px-3 py-3 text-base font-medium transition-colors rounded-r-lg`}
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 };
