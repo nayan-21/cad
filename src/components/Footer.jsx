@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Scale, Mail, Phone, MapPin } from 'lucide-react';
+import { CONTACT_INFO } from '../config/constants';
+import { trackEvent } from '../utils/analytics';
 
 const Footer = () => {
   return (
@@ -67,15 +69,27 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="text-primary shrink-0 mt-1" size={20} />
-                <span className="text-gray-400">Sector 1/156, Opp. Rameshwar Temple,<br />Nirnaynagar, Ahmedabad - 382481</span>
+                <span className="text-gray-400">{CONTACT_INFO.ADDRESS.LINE_1}<br />{CONTACT_INFO.ADDRESS.LINE_2}</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-primary shrink-0" size={20} />
-                <a href="tel:+917016965221" className="text-gray-400 hover:text-white transition-colors">7016965221</a>
+                <a 
+                  href={`tel:+91${CONTACT_INFO.PHONE_RAW}`} 
+                  onClick={() => trackEvent('call_intent', { location: 'footer' })}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {CONTACT_INFO.PHONE_DISPLAY}
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-primary shrink-0" size={20} />
-                <a href="mailto:advocatedipakprajapati3896@gmail.com" className="text-gray-400 hover:text-white transition-colors">advocatedipakprajapati3896@gmail.com</a>
+                <a 
+                  href={`mailto:${CONTACT_INFO.EMAIL}`} 
+                  onClick={() => trackEvent('email_intent', { location: 'footer' })}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {CONTACT_INFO.EMAIL}
+                </a>
               </li>
             </ul>
           </div>

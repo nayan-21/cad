@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { CONTACT_INFO } from '../config/constants';
+import { trackEvent } from '../utils/analytics';
 import { 
   Phone, 
   MessageCircle, 
@@ -73,20 +75,22 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <a 
-              href="tel:+917016965221" 
+              href={`tel:+91${CONTACT_INFO.PHONE_RAW}`} 
+              onClick={() => trackEvent('call_intent', { location: 'home_hero' })}
               className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white px-8 py-3.5 rounded-lg font-medium transition-colors flex items-center justify-center text-lg shadow-sm"
-              aria-label="Call us via phone at 7016965221"
+              aria-label={`Call us via phone at ${CONTACT_INFO.PHONE_DISPLAY}`}
             >
-              <Phone className="mr-2" size={20} aria-hidden="true" /> Call Now: 7016965221
+              <Phone className="mr-2" size={20} aria-hidden="true" /> Call Now: {CONTACT_INFO.PHONE_DISPLAY}
             </a>
             <a 
-              href="https://wa.me/917016965221?text=Hi%20Advocate%20Dipak%2C%20I%20am%20interested%20in%20your%20services." 
+              href={`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}?text=Hi%20Advocate%20Dipak%2C%20I%20am%20interested%20in%20your%20services.`} 
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent('whatsapp_intent', { location: 'home_hero' })}
               className="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-3.5 rounded-lg font-medium transition-colors flex items-center justify-center text-lg shadow-sm"
               aria-label="Message us on WhatsApp"
             >
-              <MessageCircle className="mr-2" size={20} aria-hidden="true" /> WhatsApp: 7016965221
+              <MessageCircle className="mr-2" size={20} aria-hidden="true" /> WhatsApp: {CONTACT_INFO.PHONE_DISPLAY}
             </a>
           </div>
           <div className="mt-12 flex flex-wrap justify-center gap-8 lg:gap-16 pt-8 border-t border-gray-200 border-opacity-50 max-w-3xl mx-auto">

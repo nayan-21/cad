@@ -2,6 +2,8 @@ import { MapPin, Phone, Mail, MessageCircle, Send } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { CONTACT_INFO } from '../config/constants';
+import { trackEvent } from '../utils/analytics';
 
 const Contact = () => {
   const location = useLocation();
@@ -29,10 +31,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    trackEvent('form_submission', { form_name: 'contact_lead_form' });
     const text = `Name: ${formData.name}%0A` +
                  `Phone: ${formData.phone}%0A%0A` +
                  `Message: ${formData.message}`;
-    window.open(`https://wa.me/917016965221?text=${text}`, '_blank');
+    window.open(`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}?text=${text}`, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -67,16 +70,18 @@ const Contact = () => {
                 {/* Instant Actions */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="tel:+917016965221" 
+                    href={`tel:+91${CONTACT_INFO.PHONE_RAW}`} 
+                    onClick={() => trackEvent('call_intent', { location: 'contact_page' })}
                     className="flex-1 bg-white hover:bg-gray-100 border border-gray-200 text-text-primary font-medium px-6 py-4 rounded-xl flex items-center justify-center transition-colors shadow-sm text-lg"
-                    aria-label="Call us at 7016965221"
+                    aria-label={`Call us at ${CONTACT_INFO.PHONE_DISPLAY}`}
                   >
-                    <Phone className="mr-3 text-primary" size={24} aria-hidden="true" /> 7016965221
+                    <Phone className="mr-3 text-primary" size={24} aria-hidden="true" /> {CONTACT_INFO.PHONE_DISPLAY}
                   </a>
                   <a 
-                    href={`https://wa.me/917016965221?text=${encodeURIComponent("Hi Advocate Dipak, I would like to inquire about your services.")}`}
+                    href={`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi Advocate Dipak, I would like to inquire about your services.")}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackEvent('whatsapp_intent', { location: 'contact_page' })}
                     className="flex-1 bg-[#25D366] hover:bg-[#128C7E] text-white font-medium px-6 py-4 rounded-xl flex items-center justify-center transition-colors shadow-sm text-lg"
                     aria-label="Message us on WhatsApp"
                   >
@@ -91,7 +96,7 @@ const Contact = () => {
                     </div>
                     <div className="min-w-0">
                       <h4 className="font-heading font-semibold text-text-primary text-lg mb-1">Email</h4>
-                      <a href="mailto:advocatedipakprajapati3896@gmail.com" className="text-text-secondary hover:text-primary transition-colors hover:underline break-all">advocatedipakprajapati3896@gmail.com</a>
+                      <a href={`mailto:${CONTACT_INFO.EMAIL}`} className="text-text-secondary hover:text-primary transition-colors hover:underline break-all">{CONTACT_INFO.EMAIL}</a>
                     </div>
                   </div>
 
@@ -101,7 +106,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-heading font-semibold text-text-primary text-lg mb-1">Office</h4>
-                      <p className="text-text-secondary leading-relaxed">Sector 1/156, Opp. Rameshwar Temple,<br />Nirnaynagar, Ahmedabad - 382481</p>
+                      <p className="text-text-secondary leading-relaxed">{CONTACT_INFO.ADDRESS.LINE_1}<br />{CONTACT_INFO.ADDRESS.LINE_2}</p>
                     </div>
                   </div>
                 </div>
@@ -173,7 +178,7 @@ const Contact = () => {
         </h2>
         <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm h-96">
           <iframe 
-            src="https://maps.google.com/maps?q=Sector%201/156,%20Opp.%20Rameshwar%20Temple,%20Nirnaynagar,%20Ahmedabad%20-%20382481&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            src={CONTACT_INFO.MAPS_EMBED_URL} 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
