@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { 
   FileText, 
   Receipt, 
@@ -12,45 +13,43 @@ import { Link } from 'react-router-dom';
 const Services = () => {
   const allServices = [
     {
-      title: "GST Registration & Filing",
-      description: "End-to-end management of GST registration, monthly/quarterly return filings, and resolving GST disputes.",
+      title: "GST Filing",
+      description: "Complete GST services including GSTR-1, GSTR-3B, annual returns, reconciliation, and handling notices.",
       icon: <FileText size={28} />,
       showPricingLabel: true
     },
     {
-      title: "Income Tax Return (ITR)",
-      description: "Seamless preparation and e-filing of ITR for salaried individuals, freelancers, and large corporations.",
+      title: "Income Tax Return",
+      description: "Filing of all types of income tax returns for individuals, professionals, and businesses.",
       icon: <Receipt size={28} />,
       showPricingLabel: true
     },
     {
-      title: "Business Registration",
-      description: "Complete support in setting up Private Limited Companies, LLPs, Partnerships, and Proprietorships.",
+      title: "Company Registration",
+      description: "Business setup services including LLP registration, company incorporation, and compliance support.",
       icon: <Building size={28} />,
       showPricingLabel: true
     },
     {
-      title: "Bookkeeping",
-      description: "Accurate maintenance of daily ledgers, bank reconciliations, profit & loss statements, and balance sheets.",
-      icon: <BookOpen size={28} />,
-      showPricingLabel: false
-    },
-    {
       title: "TDS Filing",
-      description: "Timely computation, deduction, and quarterly filing of Tax Deducted at Source (TDS) for your business.",
+      description: "Accurate and timely TDS return filing along with compliance management.",
       icon: <ScrollText size={28} />,
       showPricingLabel: true
     },
     {
-      title: "Financial Consulting",
-      description: "Strategic advice on budgeting, cash flow forecasting, and overall financial health checkups.",
-      icon: <TrendingUp size={28} />,
-      showPricingLabel: false
+      title: "Audit Support",
+      description: "Assistance in statutory audit, tax audit, and related documentation.",
+      icon: <FileText size={28} />,
+      showPricingLabel: true
     }
   ];
 
   return (
     <div className="bg-background min-h-screen">
+      <Helmet>
+        <title>Our Services | GST, ITR & Registration | Advocate Dipak Prajapati</title>
+        <meta name="description" content="Comprehensive financial and legal solutions including GST Filing, Income Tax Return, Company Registration, TDS Filing, and Audit Assistance." />
+      </Helmet>
       {/* Page Header */}
       <section className="bg-primary pt-24 pb-20 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,20 +80,19 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Custom Needs Section */}
       <section className="py-24 bg-white border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
           <h2 className="text-3xl font-heading font-bold text-text-primary mb-6">
-            Looking for something specific?
+            Need specialized tax or legal support?
           </h2>
           <p className="text-lg text-text-secondary leading-relaxed mb-8">
-            Every business and financial situation is unique. If you have complex requirements not listed above, we likely handle it. Reach out to discuss a customized service package.
+            Whether you're dealing with complex GST compliance, require audit assistance, or need expert legal counsel, we provide complete solutions under one roof. Reach out to discuss your specific requirements.
           </p>
           <Link 
             to="/contact" 
             className="inline-block bg-primary hover:bg-primary-dark text-white px-8 py-3.5 rounded-lg font-medium transition-colors shadow-sm"
           >
-            Schedule a Consultation
+            Contact Now
           </Link>
         </div>
       </section>

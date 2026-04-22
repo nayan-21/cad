@@ -1,8 +1,13 @@
 import { Briefcase, GraduationCap, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const About = () => {
   return (
     <div className="bg-background min-h-screen pb-24">
+      <Helmet>
+        <title>About Us | Advocate Dipak Prajapati</title>
+        <meta name="description" content="Learn about Advocate Dipak Prajapati, an experienced Advocate and GST Practitioner in Ahmedabad serving corporate and individual clients for over 10 years." />
+      </Helmet>
       {/* 1. Profile Header */}
       <section className="bg-primary pt-24 pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -19,10 +24,10 @@ const About = () => {
           
           {/* Name and Title */}
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">
-            David Anderson
+            Advocate Dipak Prajapati
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 font-medium tracking-wide">
-            Certified Public Accountant (CPA)
+            Advocate & GST Practitioner
           </p>
         </div>
       </section>
@@ -39,10 +44,7 @@ const About = () => {
               </h2>
               <div className="text-lg text-text-secondary leading-relaxed space-y-4">
                 <p>
-                  Hello, I’m David Anderson. With a passion for numbers and a commitment to helping people thrive financially, I specialize in providing tailored tax and accounting services to individuals and growing businesses alike.
-                </p>
-                <p>
-                  Navigating the ever-changing landscape of tax codes and financial compliance can be overwhelming. My goal is to simplify this process, offering clear, actionable, and secure financial strategies so that you can focus on what matters most—running your business and planning your future.
+                  Started with small clients and gradually expanded to serve corporate clients, building a strong practice based on trust and consistent service.
                 </p>
               </div>
             </div>
@@ -59,14 +61,9 @@ const About = () => {
               </div>
               <ul className="space-y-6">
                 <li className="relative pl-6 before:absolute before:left-0 before:top-2.5 before:w-2 before:h-2 before:bg-primary before:rounded-full">
-                  <h4 className="font-heading font-bold text-text-primary mb-1">Senior Accountant — Elite Financial Partners</h4>
-                  <p className="text-text-secondary font-medium mb-2">2018 – Present</p>
-                  <p className="text-text-secondary leading-relaxed">Lead tax preparation for over 200 corporate clients, identifying critical deductions and managing complex multi-state GST filings.</p>
-                </li>
-                <li className="relative pl-6 before:absolute before:left-0 before:top-2.5 before:w-2 before:h-2 before:gray-300 before:bg-gray-300 before:rounded-full">
-                  <h4 className="font-heading font-bold text-text-primary mb-1">Tax Consultant — Apex Advisory Group</h4>
-                  <p className="text-text-secondary font-medium mb-2">2013 – 2018</p>
-                  <p className="text-text-secondary leading-relaxed">Advised small-to-medium enterprises on tax compliance, audit representation, and effective bookkeeping strategies.</p>
+                  <h4 className="font-heading font-bold text-text-primary mb-1">Advocate & GST Practitioner</h4>
+                  <p className="text-text-secondary font-medium mb-2">10+ Years Experience</p>
+                  <p className="text-text-secondary leading-relaxed">Handling corporate and individual clients with precision and reliability.</p>
                 </li>
               </ul>
             </div>
@@ -83,20 +80,12 @@ const About = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="border border-gray-100 p-6 rounded-xl">
-                  <h4 className="font-heading font-bold text-text-primary mb-2">Certified Public Accountant</h4>
-                  <p className="text-text-secondary">Licensed CPA with active standing since 2014.</p>
+                  <h4 className="font-heading font-bold text-text-primary mb-2">Advocate</h4>
+                  <p className="text-text-secondary">Providing robust legal counsel and defense.</p>
                 </div>
                 <div className="border border-gray-100 p-6 rounded-xl">
-                  <h4 className="font-heading font-bold text-text-primary mb-2">Master of Accountancy</h4>
-                  <p className="text-text-secondary">University of Finance & Economics, Graduated with Honors.</p>
-                </div>
-                <div className="border border-gray-100 p-6 rounded-xl">
-                  <h4 className="font-heading font-bold text-text-primary mb-2">Enrolled Agent (EA)</h4>
-                  <p className="text-text-secondary">Federally-authorized tax practitioner empowered by the U.S. Department of the Treasury.</p>
-                </div>
-                <div className="border border-gray-100 p-6 rounded-xl">
-                  <h4 className="font-heading font-bold text-text-primary mb-2">QuickBooks ProAdvisor</h4>
-                  <p className="text-text-secondary">Certified expert in QuickBooks management and setup.</p>
+                  <h4 className="font-heading font-bold text-text-primary mb-2">GST Practitioner</h4>
+                  <p className="text-text-secondary">Expertise in accurate and timely GST compliance.</p>
                 </div>
               </div>
             </div>
@@ -112,7 +101,7 @@ const About = () => {
                 </h2>
               </div>
               <p className="text-lg text-text-secondary leading-relaxed mb-6">
-                Trust is the foundation of any financial relationship. Over the years, my clients have continually prioritized my services because of my commitment to:
+                We provide complete solutions under one roof, ensuring clients do not need to go anywhere else. From small businesses to large clients, we deliver reliable, accurate, and timely services with a strong focus on client satisfaction.
               </p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[

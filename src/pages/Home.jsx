@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { 
   Phone, 
   MessageCircle, 
@@ -16,34 +17,34 @@ const Home = () => {
   const services = [
     {
       title: "GST Filing",
-      description: "Hassle-free preparation and timely filing of GST returns to ensure full compliance.",
+      description: "Complete GST services including GSTR-1, GSTR-3B, annual returns, reconciliation, and handling notices.",
       icon: <FileText size={28} />
     },
     {
       title: "Income Tax Return",
-      description: "Accurate filing of personal and corporate income tax returns to maximize deductions.",
+      description: "Filing of all types of income tax returns for individuals, professionals, and businesses.",
       icon: <Receipt size={28} />
     },
     {
       title: "Business Registration",
-      description: "End-to-end guidance and processing for registering your new company or LLC.",
+      description: "Business setup services including LLP registration, company incorporation, and compliance support.",
       icon: <Building size={28} />
     },
     {
       title: "Bookkeeping",
-      description: "Detailed recording of your daily financial transactions and monthly reconciliations.",
+      description: "Accurate maintenance of daily ledgers, bank reconciliations, profit & loss statements, and balance sheets.",
       icon: <BookOpen size={28} />
     }
   ];
 
   const whyChooseUs = [
     {
-      title: "Experienced & Reliable",
+      title: "Experienced Professionals",
       description: "Years of industry experience ensure your finances are in safe, professional hands.",
       icon: <Award size={32} className="text-primary mb-4" />
     },
     {
-      title: "Accurate & Timely Filing",
+      title: "Accurate Filing",
       description: "We proactively manage deadlines, guaranteeing precision in every form submitted.",
       icon: <CheckCircle size={32} className="text-primary mb-4" />
     },
@@ -56,6 +57,10 @@ const Home = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Reliable Tax & Legal Services | Advocate Dipak Prajapati</title>
+        <meta name="description" content="Expert tax and legal solutions in Ahmedabad. GST filing, income tax returns, bookkeeping, and company registration by trusted Advocate Dipak Prajapati." />
+      </Helmet>
       {/* 1. Hero Section */}
       <section className="relative bg-white pt-24 pb-32">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#f9fafb_1px,transparent_1px),linear-gradient(to_bottom,#f9fafb_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40"></div>
@@ -64,22 +69,22 @@ const Home = () => {
             Reliable Accounting & Tax Services for <span className="text-primary">Individuals & Businesses</span>
           </h1>
           <p className="text-xl text-text-secondary leading-relaxed mb-10 max-w-2xl mx-auto">
-            Professional, accurate, and timely financial services you can trust.
+            Simplifying your taxes, compliance, and business needs with accuracy and reliability.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <a 
-              href="tel:+15551234567" 
+              href="tel:+917016965221" 
               className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white px-8 py-3.5 rounded-lg font-medium transition-colors flex items-center justify-center text-lg shadow-sm"
             >
-              <Phone className="mr-2" size={20} /> Call Now
+              <Phone className="mr-2" size={20} /> Call Now: 7016965221
             </a>
             <a 
-              href="https://wa.me/15551234567" 
+              href="https://wa.me/917016965221" 
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-3.5 rounded-lg font-medium transition-colors flex items-center justify-center text-lg shadow-sm"
             >
-              <MessageCircle className="mr-2" size={20} /> WhatsApp
+              <MessageCircle className="mr-2" size={20} /> WhatsApp: 7016965221
             </a>
           </div>
         </div>
@@ -90,10 +95,10 @@ const Home = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-primary font-semibold uppercase tracking-wider text-sm mb-2 block">Welcome</span>
           <h2 className="text-3xl font-heading font-bold text-text-primary mb-6">
-            Meet Your Trusted Financial Partner
+            Expert Tax & Compliance Solutions You Can Trust
           </h2>
           <p className="text-lg text-text-secondary leading-relaxed">
-            As a dedicated financial professional, I am committed to simplifying the technical complexities of accounting and tax preparation for you. Whether you are an individual looking to maximize your tax return or a growing business needing meticulous bookkeeping and compliance, my objective is to provide secure, transparent, and accurate financial services. Your growth and peace of mind are my top priorities.
+            With over 10 years of experience, we provide reliable accounting, taxation, and compliance services for individuals and businesses. Our focus is on accuracy, transparency, and long-term client trust.
           </p>
         </div>
       </section>

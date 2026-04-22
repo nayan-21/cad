@@ -25,7 +25,7 @@ const Navbar = () => {
                 <Calculator size={24} />
               </div>
               <span className="font-heading font-bold text-2xl text-text-primary">
-                Acumen<span className="text-primary">Tax</span>
+                Advocate <span className="text-primary">Dipak</span>
               </span>
             </Link>
           </div>
