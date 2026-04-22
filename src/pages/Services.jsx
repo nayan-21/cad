@@ -3,15 +3,12 @@ import {
   FileText, 
   Receipt, 
   Building, 
-  BookOpen, 
-  ScrollText, 
-  TrendingUp 
+  ScrollText
 } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
 import { Link } from 'react-router-dom';
 
-const Services = () => {
-  const allServices = [
+const allServices = [
     {
       title: "GST Filing",
       description: "Complete GST services including GSTR-1, GSTR-3B, annual returns, reconciliation, and handling notices.",
@@ -44,6 +41,7 @@ const Services = () => {
     }
   ];
 
+const Services = () => {
   return (
     <div className="bg-background min-h-screen">
       <Helmet>

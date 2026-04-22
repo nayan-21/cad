@@ -13,9 +13,8 @@ import {
 } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
 
-const Home = () => {
-  const services = [
-    {
+const services = [
+  {
       title: "GST Filing",
       description: "Complete GST services including GSTR-1, GSTR-3B, annual returns, reconciliation, and handling notices.",
       icon: <FileText size={28} />
@@ -55,6 +54,7 @@ const Home = () => {
     }
   ];
 
+const Home = () => {
   return (
     <div>
       <Helmet>

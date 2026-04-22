@@ -1,13 +1,21 @@
+import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import ScrollToTop from './components/ScrollToTop';
+
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Contact = lazy(() => import('./pages/Contact'));
+const NotFound = lazy(() => import('./pages/NotFound'));
+
+const Loader = () => (
+  <div className="flex items-center justify-center min-h-[50vh]">
+    <div className="w-12 h-12 border-4 border-blue-100 border-t-primary rounded-full animate-spin"></div>
+  </div>
+);
 
 function App() {
   return (
@@ -21,13 +29,15 @@ function App() {
       <ScrollToTop />
       <Navbar />
       <main id="main-content" className="flex-grow focus:outline-none" tabIndex={-1}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={<Loader />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </main>
       <FloatingWhatsApp />
       <Footer />
