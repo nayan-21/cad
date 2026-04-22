@@ -1,5 +1,6 @@
 import { Briefcase, GraduationCap, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -121,6 +122,24 @@ const About = () => {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* 6. CTA Section */}
+      <section className="py-20 bg-primary mt-20 relative z-10 w-full">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
+            Ready to discuss your legal or tax needs?
+          </h2>
+          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+            Get personalized advice and accurate compliance support from an experienced professional.
+          </p>
+          <Link 
+            to="/contact" 
+            className="inline-block bg-white text-primary hover:bg-gray-50 px-10 py-4 rounded-lg font-bold text-lg transition-colors shadow-sm"
+          >
+            Get a Consultation
+          </Link>
         </div>
       </section>
 

@@ -79,7 +79,7 @@ const Home = () => {
               <Phone className="mr-2" size={20} /> Call Now: 7016965221
             </a>
             <a 
-              href="https://wa.me/917016965221" 
+              href="https://wa.me/917016965221?text=Hi%20Advocate%20Dipak%2C%20I%20am%20interested%20in%20your%20services." 
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-3.5 rounded-lg font-medium transition-colors flex items-center justify-center text-lg shadow-sm"

@@ -22,7 +22,7 @@ const ServiceCard = ({ title, description, icon, delay = 0, showPricingLabel = f
         {description}
       </p>
       <Link 
-        to="/contact" 
+        to={`/contact?service=${encodeURIComponent(title)}`} 
         className="flex items-center justify-between w-full text-primary font-medium group-hover:text-primary-dark transition-colors mt-auto border-t border-gray-50 pt-4"
       >
         <span>Discuss Service</span>
