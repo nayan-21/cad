@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Calculator } from 'lucide-react';
+import { Menu, X, Scale } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +32,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
               <div className="bg-primary p-2 rounded-lg text-white">
-                <Calculator size={24} />
+                <Scale size={24} />
               </div>
               <span className="font-heading font-bold text-2xl text-text-primary">
                 Advocate <span className="text-primary">Dipak</span>

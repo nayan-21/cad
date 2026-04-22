@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Calculator, Mail, Phone, MapPin } from 'lucide-react';
+import { Scale, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,14 +11,14 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-2 mb-6">
               <div className="bg-primary p-2 rounded-lg text-white">
-                <Calculator size={20} />
+                <Scale size={20} />
               </div>
               <span className="font-heading font-bold text-2xl">
                 Advocate <span className="text-primary">Dipak</span>
               </span>
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Professional accounting, tax preparation, and financial consulting services tailored to your personal and business needs.
+              Professional advocate and GST practitioner services, offering expert tax filing, compliance, and legal support tailored to your unique business needs.
             </p>
 
           </div>

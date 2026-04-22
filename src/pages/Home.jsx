@@ -89,13 +89,27 @@ const Home = () => {
               <MessageCircle className="mr-2" size={20} aria-hidden="true" /> WhatsApp: 7016965221
             </a>
           </div>
+          <div className="mt-12 flex flex-wrap justify-center gap-8 lg:gap-16 pt-8 border-t border-gray-200 border-opacity-50 max-w-3xl mx-auto">
+             <div className="flex flex-col items-center">
+                <span className="text-3xl font-heading font-bold text-text-primary">10+</span>
+                <span className="text-sm font-medium text-text-secondary mt-1 tracking-wide uppercase">Years Experience</span>
+             </div>
+             <div className="flex flex-col items-center">
+                <span className="text-3xl font-heading font-bold text-text-primary">500+</span>
+                <span className="text-sm font-medium text-text-secondary mt-1 tracking-wide uppercase">Happy Clients</span>
+             </div>
+             <div className="flex flex-col items-center">
+                <span className="text-3xl font-heading font-bold text-text-primary">100%</span>
+                <span className="text-sm font-medium text-text-secondary mt-1 tracking-wide uppercase">Confidentiality</span>
+             </div>
+          </div>
         </div>
       </section>
 
       {/* 2. Intro Section */}
       <section className="py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-primary font-semibold uppercase tracking-wider text-sm mb-2 block">Welcome</span>
+          <span className="text-primary font-semibold uppercase tracking-wider text-sm mb-2 block">Trusted Expertise</span>
           <h2 className="text-3xl font-heading font-bold text-text-primary mb-6">
             Expert Tax & Compliance Solutions You Can Trust
           </h2>

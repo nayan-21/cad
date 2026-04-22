@@ -14,20 +14,10 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Profile Image Wrapper */}
           <div className="relative inline-block mb-8">
-            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-xl mx-auto">
-              <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600&h=600" 
-                alt="Advocate Dipak Prajapati, Advocate & GST Practitioner" 
-                className="w-full h-full object-cover bg-gray-200"
-                width="600"
-                height="600"
-                loading="eager"
-                onError={(e) => {
-                  e.target.onerror = null; 
-                  e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239CA3AF'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z' /%3E%3C/svg%3E";
-                  e.target.className = "w-full h-full object-cover bg-gray-100 p-8";
-                }}
-              />
+            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-xl mx-auto bg-blue-50 flex items-center justify-center">
+              <span className="text-6xl md:text-7xl font-heading font-bold text-primary tracking-tighter">
+                DP
+              </span>
             </div>
           </div>
           
@@ -53,7 +43,10 @@ const About = () => {
               </h2>
               <div className="text-lg text-text-secondary leading-relaxed space-y-4">
                 <p>
-                  Started with small clients and gradually expanded to serve corporate clients, building a strong practice based on trust and consistent service.
+                  We started with a vision to simplify complex tax and legal frameworks for businesses and individuals. Over the years, we have organically grown from serving local small businesses to managing comprehensive compliance portfolios for corporate clients.
+                </p>
+                <p>
+                  Our core philosophy is built on absolute transparency, relentless accuracy, and establishing long-term, trusted working relationships with our clients to ensure complete legal safety.
                 </p>
               </div>
             </div>
@@ -68,11 +61,11 @@ const About = () => {
                   Experience
                 </h2>
               </div>
-              <ul className="space-y-6">
+              <ul className="space-y-8">
                 <li className="relative pl-6 before:absolute before:left-0 before:top-2.5 before:w-2 before:h-2 before:bg-primary before:rounded-full">
-                  <h4 className="font-heading font-bold text-text-primary mb-1">Advocate & GST Practitioner</h4>
-                  <p className="text-text-secondary font-medium mb-2">10+ Years Experience</p>
-                  <p className="text-text-secondary leading-relaxed">Handling corporate and individual clients with precision and reliability.</p>
+                  <h4 className="font-heading font-bold text-text-primary mb-1 text-xl">Advocate & GST Practitioner</h4>
+                  <p className="text-primary font-semibold mb-3">10+ Years Experience</p>
+                  <p className="text-text-secondary leading-relaxed">Handling corporate and individual clients with precision and reliability. We ensure end-to-end management of legal and tax compliances, represent clients before tax authorities, and structure proactive tax planning strategies that save both time and resources.</p>
                 </li>
               </ul>
             </div>
@@ -106,7 +99,7 @@ const About = () => {
                   <ShieldCheck size={24} />
                 </div>
                 <h2 className="text-2xl font-heading font-bold text-text-primary">
-                  Why People Trust Me
+                  Why Clients Trust Us
                 </h2>
               </div>
               <p className="text-lg text-text-secondary leading-relaxed mb-6">
