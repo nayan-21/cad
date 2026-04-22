@@ -6,7 +6,7 @@ import {
   Phone, 
   MessageCircle, 
   FileText, 
-  Receipt, 
+  IndianRupee, 
   Building, 
   BookOpen, 
   Award, 
@@ -24,10 +24,10 @@ const services = [
     {
       title: "Income Tax Return",
       description: "Filing of all types of income tax returns for individuals, professionals, and businesses.",
-      icon: <Receipt size={28} />
+      icon: <IndianRupee size={28} />
     },
     {
-      title: "Business Registration",
+      title: "Company Registration",
       description: "Business setup services including LLP registration, company incorporation, and compliance support.",
       icon: <Building size={28} />
     },
@@ -80,7 +80,7 @@ const Home = () => {
               className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white px-8 py-3.5 rounded-lg font-medium transition-colors flex items-center justify-center text-lg shadow-sm"
               aria-label={`Call us via phone at ${CONTACT_INFO.PHONE_DISPLAY}`}
             >
-              <Phone className="mr-2" size={20} aria-hidden="true" /> Call Now: {CONTACT_INFO.PHONE_DISPLAY}
+              <Phone className="mr-2" size={20} aria-hidden="true" /> Call Now
             </a>
             <a 
               href={`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}?text=Hi%20Advocate%20Dipak%2C%20I%20am%20interested%20in%20your%20services.`} 
@@ -90,22 +90,8 @@ const Home = () => {
               className="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-3.5 rounded-lg font-medium transition-colors flex items-center justify-center text-lg shadow-sm"
               aria-label="Message us on WhatsApp"
             >
-              <MessageCircle className="mr-2" size={20} aria-hidden="true" /> WhatsApp: {CONTACT_INFO.PHONE_DISPLAY}
+              <MessageCircle className="mr-2" size={20} aria-hidden="true" /> WhatsApp
             </a>
-          </div>
-          <div className="mt-12 flex flex-wrap justify-center gap-8 lg:gap-16 pt-8 border-t border-gray-200 border-opacity-50 max-w-3xl mx-auto">
-             <div className="flex flex-col items-center">
-                <span className="text-3xl font-heading font-bold text-text-primary">10+</span>
-                <span className="text-sm font-medium text-text-secondary mt-1 tracking-wide uppercase">Years Experience</span>
-             </div>
-             <div className="flex flex-col items-center">
-                <span className="text-3xl font-heading font-bold text-text-primary">500+</span>
-                <span className="text-sm font-medium text-text-secondary mt-1 tracking-wide uppercase">Happy Clients</span>
-             </div>
-             <div className="flex flex-col items-center">
-                <span className="text-3xl font-heading font-bold text-text-primary">100%</span>
-                <span className="text-sm font-medium text-text-secondary mt-1 tracking-wide uppercase">Confidentiality</span>
-             </div>
           </div>
         </div>
       </section>

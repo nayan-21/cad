@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Scale, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { CONTACT_INFO } from '../config/constants';
 import { trackEvent } from '../utils/analytics';
 
@@ -12,11 +12,8 @@ const Footer = () => {
           {/* Brand Info */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="bg-primary p-2 rounded-lg text-white">
-                <Scale size={20} />
-              </div>
-              <span className="font-heading font-bold text-2xl">
-                Advocate <span className="text-primary">Dipak</span>
+              <span className="font-heading font-bold text-xl md:text-2xl">
+                Advocate <span className="text-primary">Dipak Prajapati</span>
               </span>
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">

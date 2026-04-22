@@ -1,9 +1,11 @@
 import { Helmet } from 'react-helmet-async';
 import { 
   FileText, 
-  Receipt, 
+  IndianRupee, 
   Building, 
-  ScrollText
+  ScrollText,
+  BookOpen,
+  ClipboardCheck
 } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
 import { Link } from 'react-router-dom';
@@ -12,32 +14,32 @@ const allServices = [
     {
       title: "GST Filing",
       description: "Complete GST services including GSTR-1, GSTR-3B, annual returns, reconciliation, and handling notices.",
-      icon: <FileText size={28} />,
-      showPricingLabel: true
+      icon: <FileText size={28} />
     },
     {
       title: "Income Tax Return",
       description: "Filing of all types of income tax returns for individuals, professionals, and businesses.",
-      icon: <Receipt size={28} />,
-      showPricingLabel: true
+      icon: <IndianRupee size={28} />
     },
     {
       title: "Company Registration",
       description: "Business setup services including LLP registration, company incorporation, and compliance support.",
-      icon: <Building size={28} />,
-      showPricingLabel: true
+      icon: <Building size={28} />
+    },
+    {
+      title: "Bookkeeping",
+      description: "Accurate maintenance of daily ledgers, bank reconciliations, profit & loss statements, and balance sheets.",
+      icon: <BookOpen size={28} />
     },
     {
       title: "TDS Filing",
       description: "Accurate and timely TDS return filing along with compliance management.",
-      icon: <ScrollText size={28} />,
-      showPricingLabel: true
+      icon: <ScrollText size={28} />
     },
     {
       title: "Audit Support",
       description: "Assistance in statutory audit, tax audit, and related documentation.",
-      icon: <FileText size={28} />,
-      showPricingLabel: true
+      icon: <ClipboardCheck size={28} />
     }
   ];
 
@@ -71,7 +73,6 @@ const Services = () => {
                 description={service.description}
                 icon={service.icon}
                 delay={index * 50}
-                showPricingLabel={service.showPricingLabel}
               />
             ))}
           </div>

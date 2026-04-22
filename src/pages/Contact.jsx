@@ -75,7 +75,7 @@ const Contact = () => {
                     className="flex-1 bg-white hover:bg-gray-100 border border-gray-200 text-text-primary font-medium px-6 py-4 rounded-xl flex items-center justify-center transition-colors shadow-sm text-lg"
                     aria-label={`Call us at ${CONTACT_INFO.PHONE_DISPLAY}`}
                   >
-                    <Phone className="mr-3 text-primary" size={24} aria-hidden="true" /> {CONTACT_INFO.PHONE_DISPLAY}
+                    <Phone className="mr-3 text-primary" size={24} aria-hidden="true" /> Call Now
                   </a>
                   <a 
                     href={`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi Advocate Dipak, I would like to inquire about your services.")}`}
@@ -129,7 +129,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                    placeholder="John Doe"
+                    placeholder="Rahul Sharma"
                   />
                 </div>
                 <div>

@@ -14,10 +14,15 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Profile Image Wrapper */}
           <div className="relative inline-block mb-8">
-            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-xl mx-auto bg-blue-50 flex items-center justify-center">
-              <span className="text-6xl md:text-7xl font-heading font-bold text-primary tracking-tighter">
-                DP
-              </span>
+            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-xl mx-auto bg-white flex items-center justify-center">
+              <img 
+                src="/profile-pic.jpg" 
+                alt="Advocate Dipak Prajapati, Advocate & GST Practitioner" 
+                className="w-full h-full object-cover object-top scale-[0.85] translate-y-3"
+                width="192"
+                height="192"
+                loading="eager"
+              />
             </div>
           </div>
           

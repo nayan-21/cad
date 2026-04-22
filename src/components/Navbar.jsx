@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Scale } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,11 +31,8 @@ const Navbar = () => {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
-              <div className="bg-primary p-2 rounded-lg text-white">
-                <Scale size={24} />
-              </div>
-              <span className="font-heading font-bold text-2xl text-text-primary">
-                Advocate <span className="text-primary">Dipak</span>
+              <span className="font-heading font-bold text-lg sm:text-xl md:text-2xl text-text-primary whitespace-nowrap">
+                Advocate <span className="text-primary">Dipak Prajapati</span>
               </span>
             </Link>
           </div>
