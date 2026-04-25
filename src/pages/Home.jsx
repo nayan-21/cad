@@ -68,7 +68,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#f9fafb_1px,transparent_1px),linear-gradient(to_bottom,#f9fafb_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-text-primary leading-tight max-w-4xl mx-auto mb-6">
-            Reliable Accounting & Tax Services for <span className="text-primary">Individuals & Businesses</span>
+            Accurate Accounting & Tax Services
           </h1>
           <p className="text-xl text-text-secondary leading-relaxed mb-10 max-w-2xl mx-auto">
             Simplifying your taxes, compliance, and business needs with accuracy and reliability.
